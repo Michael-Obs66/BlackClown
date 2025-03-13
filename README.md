@@ -12,7 +12,7 @@ This security assessment was conducted to evaluate the security posture of the t
 A custom AI model, leveraging transformers and pre-trained models such as CodeBERT and BART, was used to analyze source code for potential security flaws. The AI model classified vulnerabilities based on severity and likelihood of exploitation.
 
 # 2.2 Automated Exploit Generation
-Once a high-probability vulnerability was detected, the system automatically generated a Proof of Concept (PoC) exploit targeting the identified weakness. The exploit was executed in a controlled environment to validate the findings.
+Once a high-probability vulnerability was detected, the system automatically generated a exploit targeting the identified weakness. The exploit was executed in a controlled environment to validate the findings.
 
 # 2.3 Privilege Escalation & Root Access Validation
 If Remote Code Execution (RCE) was confirmed, additional tests were performed to determine if privilege escalation to root was possible. AI-assisted post-exploitation scripts analyzed system configurations, extracted sensitive data, and assessed the depth of compromise.
@@ -23,8 +23,8 @@ The notebook utilizes AI models, specifically CodeBERT and BART, to analyze sour
 # How the AI Works in This Notebook:
   [1]	Loads a pre-trained AI model optimized for code security analysis.
   [2] Processes a given source code snippet to detect vulnerabilities.
-  [3] Identifies the most probable security issue and suggests a Proof of Concept (PoC) for exploitation.
-  [4] Optionally, executes the PoC in a sandboxed environment for validation.
+  [3] Identifies the most probable security issue and suggests for exploitation.
+  [4] Optionally, executes in a sandboxed environment for validation.
 
 # Function Overview
   [1]	load_best_model(): Loads and selects the best vulnerability detection model.
