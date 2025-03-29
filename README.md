@@ -1,41 +1,72 @@
 # BlackClown : AI-Assisted Tools for Scanning Vulnerability
  Created by Armx888
 
- 
-# 1. Introduction
+# Introduction
+BLACKCLOWN is an advanced vulnerability scanner that utilizes machine learning models to detect and exploit common security vulnerabilities in web applications. It supports multiple deep learning models and performs automated security assessments.
 
-This security assessment was conducted to evaluate the security posture of the target application using AI-driven vulnerability detection and automated exploit execution. The primary goal was to identify critical vulnerabilities, particularly those leading to Remote Code Execution (RCE), which could grant unauthorized root access to the system.
+# Features
+   * Supports multiple AI/ML models for vulnerability detection
+   * Detects vulnerabilities such as SQL Injection, XSS, RCE, SSRF, and more
+   * Automatically classifies vulnerability types
+   * Provides Proof of Concept (PoC) exploitation
+   * Supports code analysis from URLs
+   * Works with Python and PyTorch
 
-# 2. Testing Methodology
+# Installation
+# Prerequisites
 
-# 2.1 AI-Based Vulnerability Detection
-A custom AI model, leveraging transformers and pre-trained models such as CodeBERT and BART, was used to analyze source code for potential security flaws. The AI model classified vulnerabilities based on severity and likelihood of exploitation.
+Ensure you have the following installed:
 
-# 2.2 Automated Exploit Generation
-Once a high-probability vulnerability was detected, the system automatically generated a exploit targeting the identified weakness. The exploit was executed in a controlled environment to validate the findings.
+   * Python 3.7+
+   * pip
+   * PyTorch
+   * Transformers
+   * Requests
+   * Pygments
 
-# 2.3 Privilege Escalation & Root Access Validation
-If Remote Code Execution (RCE) was confirmed, additional tests were performed to determine if privilege escalation to root was possible. AI-assisted post-exploitation scripts analyzed system configurations, extracted sensitive data, and assessed the depth of compromise.
+# Install Dependencies
 
-# 3. General AI Explanation
-The notebook utilizes AI models, specifically CodeBERT and BART, to analyze source code and detect potential security vulnerabilities. It assigns a probability score to determine how likely a piece of code is to be exploited. If the probability exceeds 98%, it identifies the most critical vulnerability.
+pip install torch transformers requests pygments
 
-# How the AI Works in This Notebook:
-  [1]	Loads a pre-trained AI model optimized for code security analysis.
-  [2] Processes a given source code snippet to detect vulnerabilities.
-  [3] Identifies the most probable security issue and suggests for exploitation.
-  [4] Optionally, executes in a sandboxed environment for validation.
+# Usage
 
-# Function Overview
-  [1]	load_best_model(): Loads and selects the best vulnerability detection model.
-  [2]	predict_vulnerability(code_snippet): Predicts how vulnerable a given code snippet is.
-  [3]	classify_vulnerability_type(): Determines the most critical vulnerability detected.
-  [4]	generate_exploit_poc(vuln_type): Generates an exploit script for testing.
-  [5]	execute_exploit(exploit_code): Runs the exploit in a test environment and logs results.
+# Run the Scanner
 
-# Steps to Reproduce
-  [1]	Run the Notebook to initialize the AI model.
-  [2]	Provide a URL containing the source code to be analyzed.
-  [3]	The AI will scan the code and calculate the probability of vulnerability.
-  [4]	If the probability is ≥98%, the script generates a PoC for the most critical issue.
-  [5]	The notebook then generated an RCE PoC, which was executed in a controlled environment to verify the issue.
+python blackclown_scanner.py
+
+# Scan a Target URL
+
+Enter the target URL when prompted:
+Enter target URL to scan: https://example.com/api
+
+# Expected Output
+
+   * Detected vulnerabilities with confidence scores
+   * Potential exploits attempted
+   * Status and response from the target
+
+# Supported Vulnerabilities
+
+   * SQL Injection (SQLi)
+   * Cross-Site Scripting (XSS)
+   * Command Injection
+   * Remote Code Execution (RCE)
+   * Server-Side Request Forgery (SSRF)
+   * Path Traversal
+   * Insecure Direct Object Reference (IDOR)
+
+# Warning
+
+This tool is intended for ethical security testing only. Use it only on systems you have explicit permission to test. Unauthorized use may be illegal.
+
+# License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+# Contribution
+
+Pull requests and issues are welcome! Please follow the contribution guidelines when submitting changes.
+
+# Contact
+
+For any questions, contact the developer or open an issue on GitHub.
