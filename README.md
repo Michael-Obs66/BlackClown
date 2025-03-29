@@ -1,8 +1,7 @@
-# BlackClown : AI-Assisted Tools for RCE Vulnerability Test, Discovery &amp; Exploitation,
-![image](https://github.com/user-attachments/assets/5e08bfeb-65be-422b-96bf-ea88ad7af703)
-
-
+# BlackClown : AI-Assisted Tools for Scanning Vulnerability
  Created by Armx888
+
+ 
 # 1. Introduction
 
 This security assessment was conducted to evaluate the security posture of the target application using AI-driven vulnerability detection and automated exploit execution. The primary goal was to identify critical vulnerabilities, particularly those leading to Remote Code Execution (RCE), which could grant unauthorized root access to the system.
